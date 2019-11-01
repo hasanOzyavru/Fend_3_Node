@@ -1,5 +1,5 @@
 const baseURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
-const apiKey = "06bb0ad71a9caa1520f4937937378e3f";
+const apiKey = "Your api_key here";
 
 const zip = document.getElementById("zip");
 const buton = document.getElementById("my-button");
