@@ -1,11 +1,18 @@
-let data = [{ name: "Somewhere", temperature: 30 }];
+let data = [{
+  name: "Somewhere",
+  temperature: 30
+}];
 
 const express = require("express");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const dotenv = require("dotenv").config();
+
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(express.static("public"));
@@ -23,7 +30,7 @@ app.get("/app", (req, res) => {
   res.send(data);
 });
 
-const port = 8080;
+const port = 3000;
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);

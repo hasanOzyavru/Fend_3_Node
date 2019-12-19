@@ -1,5 +1,5 @@
 const baseURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
-const apiKey = "Your api_key here";
+const apiKey = "06bb0ad71a9caa1520f4937937378e3f";
 
 const zip = document.getElementById("zip");
 const buton = document.getElementById("my-button");
@@ -32,7 +32,7 @@ buton.addEventListener("click", () => {
   getData(baseURL, zipval, apiKey).then(result => {
     console.log(result);
     res.textContent = `${result.name} is ${result.main.temp} C`;
-    postData("http://localhost:8080/app", {
+    postData("http://localhost:3000/app", {
       name: result.name,
       temperature: result.main.temp
     });
